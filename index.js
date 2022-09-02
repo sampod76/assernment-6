@@ -37,8 +37,8 @@ const displayNews = (allNews) => {
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">${title}</h5>
-        <p class="card-text">${details.slice(0, 300)}</p>
-        <p class="card-text">${details.slice(300, 1000)}</p>
+        <p class="card-text">${details.length>300?details.slice(0,299):details}</p>
+        <p class="card-text">${details.slice(299,600).length>300?details.slice(299,500)+"...":details.slice(299,600)}</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
       <!-- img -->
