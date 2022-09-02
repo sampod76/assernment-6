@@ -109,7 +109,7 @@ const displayCatagori = (catagorisLink) => {
         const { category_id, category_name } = catagori
         const createElement = document.createElement("a")
         createElement.innerHTML = `
-        <button class="rounded border border-success p-2 bg-info text-white" onclick="loadDatas('${category_id}')">${category_name}</button>
+        <button class="rounded  p-2 bg-info text-white form-control" onclick="loadDatas('${category_id}')">${category_name}</button>
         `
         getCatagoriFuild.appendChild(createElement)
 
