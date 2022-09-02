@@ -12,6 +12,14 @@ const displayNews = (allNews) => {
     getOutputFuild.innerHTML = ''
     arrayValue = allNews.length
    
+
+    // no list 
+    const getNoOfList=document.getElementById("list-Number")
+    getNoOfList.innerHTML=`
+    <h1>Total this catagoris News : ${arrayValue}</h2>
+    `
+
+
     const getElementById=document.getElementById("no-found")
     if (arrayValue === 0) {
     getElementById.classList.remove("d-none")
