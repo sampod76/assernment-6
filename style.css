@@ -1,6 +1,9 @@
 .backgroundColor{
     background-color: rgb(202, 202, 202);
 }
+.catagoriesColor{
+    background-color: rgb(157, 170, 182);
+}
 .btn-color{
     background-image: linear-gradient(to right,rgb(89, 89, 215),rgb(100, 79, 114),rgb(121, 64, 121));
 }

@@ -16,7 +16,7 @@ const displayNews = (allNews) => {
     // no list 
     const getNoOfList=document.getElementById("list-Number")
     getNoOfList.innerHTML=`
-    <h1>Total this categories  : ${arrayValue} News</h2>
+    <h1 class="catagoriesColor p-3 rounded-3 my-2">Total this categories  : ${arrayValue} News</h2>
     `
 
 
@@ -27,14 +27,33 @@ const displayNews = (allNews) => {
     else{
         getElementById.classList.add("d-none")
     }
-    allNews.sort((a,b)=>{
-        if(a.total_view<b.total_view){
-            return 1
-        }
-        else{
-            return -1
-        }
-    })
+
+    // add sort function 
+   const sortFunction=(isTrue)=>{
+    if(isTrue===true){
+        allNews.sort((a,b)=>{
+            if(a.total_view<b.total_view){
+                return 1
+            }
+            else{
+                return -1
+            }
+        })
+    }
+    else(
+        allNews.sort((a,b)=>{
+            if(a.total_view>b.total_view){
+                return 1
+            }
+            else{
+                return -1
+            }
+        })
+    )
+   }
+//    default call sort 
+   sortFunction(true)
+   
     for (const news of allNews) {
         // console.log(news)
         const { rating, title, author, thumbnail_url, image_url, details, _id: id,total_view } = news
@@ -47,7 +66,7 @@ const displayNews = (allNews) => {
         createElement.innerHTML = `
         <div class="card mb-3">
   <div class="row g-0">
-    <div class="col-md-4">
+    <div class="col-md-4 p-4">
       <img  src="${thumbnail_url}" class="w-100 h-100 rounded-start" alt="...">
     </div>
     <div class="col-md-8">
@@ -132,6 +151,7 @@ const displayCatagori = (catagorisLink) => {
 
     });
 }
+
 catagoriFunction()
 
 loadDatas("01")
