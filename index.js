@@ -93,11 +93,11 @@ const displayNews = (allNews) => {
                </div>
              <div class="ms-2">
               <p>${name ? name : "No found"}</p>
-              <p>${published_date}</p>
+              <p>${published_date?published_date:"no found"}</p>
              </div>
            </div> 
           <div> <span class="material-symbols-outlined">
-          visibility ${ratingNumber}M</div>
+          visibility ${ratingNumber?ratingNumber:"no found"}M</div>
           
            <div> <button onclick="toggleBtn('${id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
            more
@@ -142,9 +142,9 @@ const displayModal = (modalDetails) => {
  <img style="width:3rem" class="rounded-circle mt-2" src="${img}" alt="">
  <h5>Total view :${total_view ? total_view : "No found"}</h5>
  <h5>Author: ${name ? name : "no found"}</h5>
- <h5>Published Date :${published_date}</h5>
+ <h5>Published Date :${published_date?published_date:"no found"}</h5>
  <h5>Title :${title}</h5>
- <p>Details :${details.slice(0,200)}</p>
+ <p>Details :${details.slice(0,200)?details.slice(0,200):"no found"}</p>
  
  `
 
