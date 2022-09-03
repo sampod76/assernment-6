@@ -16,7 +16,7 @@ const displayNews = (allNews) => {
     // no list 
     const getNoOfList=document.getElementById("list-Number")
     getNoOfList.innerHTML=`
-    <h1>Total this catagoris News : ${arrayValue}</h2>
+    <h1>Total this categories  : ${arrayValue} News</h2>
     `
 
 
@@ -27,9 +27,17 @@ const displayNews = (allNews) => {
     else{
         getElementById.classList.add("d-none")
     }
+    allNews.sort((a,b)=>{
+        if(a.total_view<b.total_view){
+            return 1
+        }
+        else{
+            return -1
+        }
+    })
     for (const news of allNews) {
         // console.log(news)
-        const { rating, title, author, thumbnail_url, image_url, details, _id: id } = news
+        const { rating, title, author, thumbnail_url, image_url, details, _id: id,total_view } = news
         const { name, published_date, img } = author
         const { number: ratingNumber } = rating
       
@@ -44,7 +52,8 @@ const displayNews = (allNews) => {
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">${title}</h5>
+        <h5 class="card-title">${title} </h5>
+        <h4 class='text-info'><span>Total view : ${total_view }</span></h4>
         <p class="card-text">${details.length>300?details.slice(0,299):details}</p>
         <p class="card-text">${details.slice(299,600).length>300?details.slice(299,500)+"...":details.slice(299,600)}</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
