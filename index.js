@@ -106,12 +106,14 @@ const displayNews = (allNews) => {
 
     }
 
+    // spainner of because data load after 
+    spainner(false)
+
 }
 
 const toggleBtn = async (newsId) => {
     const respons = await fetch(`https://openapi.programming-hero.com/api/news/${newsId}`)
     const datas = await respons.json()
-    console.log(datas.data[0])
     displayModal(datas.data[0])
 }
 
@@ -132,6 +134,8 @@ const displayModal = (modalDetails) => {
 }
 
 
+//-------------------catagoris to click load data --start----------------
+
 const catagoriFunction = async () => {
 
     const respons = await fetch(`https://openapi.programming-hero.com/api/news/categories`)
@@ -141,19 +145,32 @@ const catagoriFunction = async () => {
 
 const displayCatagori = (catagorisLink) => {
     const getCatagoriFuild = document.getElementById("catagoriId")
-
+   
     catagorisLink.forEach(catagori => {
         const { category_id, category_name } = catagori
         const createElement = document.createElement("a")
         createElement.innerHTML = `
-        <button class="rounded  p-2 btn-color text-white form-control" onclick="loadDatas('${category_id}')">${category_name}</button>
+        <button class="rounded  p-2 btn-color text-white form-control" onclick="loadDatas('${category_id}'); spainner(true)">${category_name}</button>
         `
+        
         getCatagoriFuild.appendChild(createElement)
 
-    });
-}
 
-//    click call sort function 
+    });
+    
+}
+//-------------------catagoris to click load data --end----------------
+
+//    spainner function
+const spainner=(isTrue)=>{
+    const getElementById=document.getElementById("spinnerId")
+    if(isTrue===true){
+        getElementById.classList.remove("d-none")
+    }
+    else{
+        getElementById.classList.add("d-none")
+    }
+}
 
 
 catagoriFunction()
