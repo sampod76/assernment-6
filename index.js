@@ -89,12 +89,12 @@ const displayNews = (allNews) => {
               <p>${published_date}</p>
              </div>
            </div> 
-                <img style="width:3rem ; height:3rem" class="" src="img/icons8-eyes-64.png" alt="">
-                <span class="fs-2 ms-2">${ratingNumber}M</span>
-            <div>
-            <button onclick="toggleBtn('${id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            more
-            </button>
+          <div> <span class="material-symbols-outlined">
+          visibility ${ratingNumber}M</div>
+          
+           <div> <button onclick="toggleBtn('${id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+           more
+           </button></div>
             
         </div>
     </div>
