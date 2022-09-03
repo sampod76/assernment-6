@@ -53,7 +53,8 @@ const displayNews = (allNews) => {
    }
 //    default call sort 
    sortFunction(true)
-   
+
+
     for (const news of allNews) {
         // console.log(news)
         const { rating, title, author, thumbnail_url, image_url, details, _id: id,total_view } = news
@@ -72,7 +73,7 @@ const displayNews = (allNews) => {
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">${title} </h5>
-        <h4 class='text-info'><span>Total view : ${total_view }</span></h4>
+        <h4 class='text-info'><span>Total view : ${total_view?total_view:"no found" }</span></h4>
         <p class="card-text">${details.length>300?details.slice(0,299):details}</p>
         <p class="card-text">${details.slice(299,600).length>300?details.slice(299,500)+"...":details.slice(299,600)}</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -151,6 +152,9 @@ const displayCatagori = (catagorisLink) => {
 
     });
 }
+
+//    click call sort function 
+
 
 catagoriFunction()
 
