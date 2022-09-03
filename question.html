@@ -19,81 +19,86 @@
 <body class="container border border-success ">
 
   <div>
-    <h1 class="mx-auto  bg-success d-flex justify-content-center rounded-5 my-5 p-4">Please select the question</h1>
+    <h1 class="mx-auto w-50 bg-success d-flex justify-content-center rounded-5 my-5 p-4">Please select the question</h1>
   </div>
   <section>
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Difference var,let and const ?
-  
+          <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            Difference var,let and const ?
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
           <div class="accordion-body">
-              <h4>1)var: The var keyword declares a function-scoped or global variable, optionally initializing it to a
-                value.
-                Function-scoped means that the variable is only available within the function it was declared in. Global
-                variables are available throughout your entire code.</h4>
-              <h4>2)let: The let keyword declares a block-scoped local variable, optionally initializing it to a value.
-                Block-scoped means that the variable is only available within the block it was declared in, which is
-                usually denoted by curly braces {}.</h4>
-              <h4>3)const: The const keyword declares a block-scoped, immutable constant variable, i.e. a variable that
-                cant be reassigned.
-                Constants are also called “immutable variables”, but thats a bit of a misnomer since they are actually
-                variables  just ones that cant be reassigned.</h4>
-            </div>
+            <h4>1)var: The var keyword declares a function-scoped or global variable, optionally initializing it to a
+              value.
+              Function-scoped means that the variable is only available within the function it was declared in. Global
+              variables are available throughout your entire code.</h4>
+            <h4>2)let: The let keyword declares a block-scoped local variable, optionally initializing it to a value.
+              Block-scoped means that the variable is only available within the block it was declared in, which is
+              usually denoted by curly braces {}.</h4>
+            <h4>3)const: The const keyword declares a block-scoped, immutable constant variable, i.e. a variable that
+              cant be reassigned.
+              Constants are also called “immutable variables”, but that’s a bit of a misnomer since they are actually
+              variables  just ones that cant be reassigned.</h4>
+          </div>
         </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Difference between arrow function and normal function
-  
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Difference between arrow function and normal function
           </button>
         </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#accordionExample">
           <div class="accordion-body">
-              <H4>Unlike regular functions, arrow functions do not have their own this . The value of this inside an arrow function remains the same throughout the lifecycle of the function and is always bound to the value of this in the closest non-arrow parent function.</H4>
-            </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              what is map,forEach,filter,find?
-  
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-              <h4>1)Map : The JavaScript Map object is used to map keys to values. It stores each element as key-value pair. It operates the elements such as search, update and delete on the basis of specified key.</h4>
-              <h4>2)forEach: The JavaScript forEach method is one of the several ways to loop through arrays. Each method has different features, and it is up to you, depending on what you're doing, to decide which one to use.</h4>
-              <h4>3)filter : The JavaScript filter array function is used to filter an array based on specified criteria. After filtering it returns an array with the values that pass the filter.
-  
-                The JavaScript filter function iterates over the existing values in an array and returns the values that pass. The search criteria in the JavaScript filter function are passed using a callbackfn. </h4>
-              <h4>
-                4)find : The JavaScript array find() method returns the first element of the given array that satisfies the provided function condition.
-              </h4>
-            </div>
+            <H4>Unlike regular functions, arrow functions do not have their own this . The value of this inside an arrow function remains the same throughout the lifecycle of the function and is always bound to the value of this in the closest non-arrow parent function.</H4>
+          </div>
         </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              what is template string ?
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            what is map,forEach,filter,find?
           </button>
         </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+          data-bs-parent="#accordionExample">
           <div class="accordion-body">
-              <h4> Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements</h4>
+            <h4>1)Map : The JavaScript Map object is used to map keys to values. It stores each element as key-value pair. It operates the elements such as search, update and delete on the basis of specified key.</h4>
+            <h4>2)forEach: The JavaScript forEach method is one of the several ways to loop through arrays. Each method has different features, and it is up to you, depending on what you're doing, to decide which one to use.</h4>
+            <h4>3)filter : The JavaScript filter array function is used to filter an array based on specified criteria. After filtering it returns an array with the values that pass the filter.
+
+              The JavaScript filter function iterates over the existing values in an array and returns the values that pass. The search criteria in the JavaScript filter function are passed using a callbackfn. </h4>
+            <h4>
+              4)find : The JavaScript array find() method returns the first element of the given array that satisfies the provided function condition.
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            what is template string ?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+           <h4> Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements</h4>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <script src="index.js"></script>
+ 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
