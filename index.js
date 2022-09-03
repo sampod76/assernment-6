@@ -10,8 +10,7 @@ const loadDatas = async (catagorisID) => {
         getArrorId.classList.add("d-none")
     }
     catch{
-        getArrorId.classList.remove("d-none")
-        
+        getArrorId.classList.remove("d-none")  
     }
 }
 
@@ -136,7 +135,7 @@ getArrorId.classList.remove("d-none")
 const displayModal = (modalDetails) => {
 
     const getModalBody = document.getElementById("modal-body")
-    const { total_view, author, image_url } = modalDetails
+    const { total_view, author, image_url,title,details } = modalDetails
     const { name, published_date, img } = author
     getModalBody.innerHTML = `
  <img class="img-fluid" src="${image_url}" alt="">
@@ -144,6 +143,8 @@ const displayModal = (modalDetails) => {
  <h5>Total view :${total_view ? total_view : "No found"}</h5>
  <h5>Author: ${name ? name : "no found"}</h5>
  <h5>Published Date :${published_date}</h5>
+ <h5>Title :${title}</h5>
+ <p>Details :${details.slice(0,200)}</p>
  
  `
 
